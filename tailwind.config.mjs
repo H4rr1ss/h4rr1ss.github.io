@@ -2,7 +2,12 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+        customBg: 'rgba(167, 199, 231, 0.03)',
+				customBg2: 'rgba(167, 199, 231, 0.1)',
+      },
+		},
 	},
 	plugins: [],
 }

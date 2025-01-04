@@ -4,3 +4,7 @@ export const dataNavbar = [
   { name: "Skills", path: "#skills" },
   { name: "Contact", path: "#contact" },
 ];
+
+export const dataPresentation = {
+  title: "Hi, I'm Harry",
+}
