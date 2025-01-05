@@ -7,4 +7,5 @@ export const dataNavbar = [
 
 export const dataPresentation = {
   title: "Hi, I'm Harry",
+  description: "Software Developer",
 }

@@ -7,6 +7,9 @@ export default {
         customBg: 'rgba(167, 199, 231, 0.03)',
 				customBg2: 'rgba(167, 199, 231, 0.1)',
       },
+			fontWeight: {
+        '1200': 1200,
+      },
 		},
 	},
 	plugins: [],

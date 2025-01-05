@@ -3,13 +3,19 @@ import { dataPresentation as data } from '../constants/const'
 import "../styles/comp.css"
 ---
 
-<section class="min-h-screen flex flex-col items-center justify-center relative px-[6px]">
-  <div class="w-[290px] h-[290px] bg-customBg rounded-full absolute"></div>
-  <div class="w-[170px] h-[170px] bg-customBg rounded-full absolute"></div>
-  <h3 class="text-xl">{data.title}</h3>
-  <h1
-    class="mt-3 text-3xl flex tracking-widest w-full bg-red-100 whitespace-nowrap overflow-hidden title border-r-[3px] border-[#1255C8]"
-  >
-    Software Developer
-  </h1>
+<section class="min-h-screen flex flex-col justify-center px-[28px]">
+  <div class="flex flex-col gap-4 w-full">
+    <h2 class="text-3xl font-medium w-[170px] whitespace-nowrap overflow-hidden border-r-[3px] border-[#e8e8e8] name">{data.title}</h2>
+    <h1
+      class="text-3xl font-semibold flex tracking-wider title"
+    >
+      Sofware Developer
+    </h1>
+    <p class="text-[#c5c5c5]">I build custom solutions to help people advance in the digital world.</p>
+    <button
+      class="cursor-pointer text-[#7FD5FA] border-[#7FD5FA] border-[1px] px-10 py-[7px] mt-4 rounded-lg font-medium text-sm w-[100px]"
+    >
+      CV
+    </button>
+  </div>
 </section>
