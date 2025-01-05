@@ -1,3 +1,7 @@
+.presentation{
+  background: linear-gradient(180deg, #030712 58%, #1C0209 100%);
+}
+
 .title{
   background: linear-gradient(90deg, #7FD8FA 0%, #1255C8 100%);
   background-clip: text;
@@ -17,4 +21,36 @@
 
 @keyframes typing {
   from { width: 0 }
+}
+
+.bubbles span {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  background: #7FD8FA;
+  opacity: 0.4;
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px #1e3742,
+              0 0 40px #7FD8FA,
+              0 0 90px #7FD8FA;
+  animation: animate 14s linear infinite;
+  animation-duration: calc(610s / var(--i));
+  animation-delay: calc(var(--i) * -2s);
+}
+
+.bubbles span:nth-child(even) {
+  background: #df1515;
+  opacity: 0.4;
+  box-shadow: 0 0 0 8px #521506,
+              0 0 40px #df1515,
+              0 0 90px #df1515;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(-10vh) scale(1);
+  }
+  100% {
+    transform: translateY(110vh) scale(0);
+  }
 }
