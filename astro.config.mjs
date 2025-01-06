@@ -7,4 +7,5 @@ import tailwind from '@astrojs/tailwind';    // Importa la integración de Tailw
 export default defineConfig({
   integrations: [tailwind(), react()],
   site: 'https://H4rr1ss.github.io',
+  base: '/',
 });
