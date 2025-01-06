@@ -2,47 +2,50 @@
 import { dataExperience as data } from "../constants/const";
 ---
 
-<section class="py-5">
-  <h1 class="text-center text-2xl text-white tracking-widest">
+<section class="py-5 lg:pb-5 lg:pt-10">
+  <h1 class="text-center text-2xl text-white tracking-widest md:text-4xl xl:text-5xl">
     Experience
   </h1>
-  <div class="w-full mt-10">
+  <div class="w-full mt-10 md:mt-12 lg:mt-16 xl:mt-20 flex">
     <!-- Decorative -->
-    <div class="">
-
+    <div class="hidden mr-5 lg:mr-3 p-1 lg:p-0.5 md:flex flex-col justify-center items-center gap-2">
+      <div class="w-[5px] h-[5px] lg:w-1 lg:h-1 bg-tbase rounded-full"></div>
+      <div class="w-0.5 lg:w-[1px] h-full bg-tbase rounded-sm"></div>
     </div>
     <!-- Content -->
-    {data.map(({ tittle, company, date }) =>
-      <div class="flex flex-col gap-1">
-        <h2 class="text-lg tittle-experience font-semibold">
-          {tittle}
-        </h2>
-        <h3 class="text-details text-xs">
-          {date}
-        </h3>
+    <div>
+      {data.map(({ tittle, company, date }) =>
+        <div class="flex flex-col gap-0.5">
+          <h2 class="text-lg tittle-experience font-semibold md:text-xl">
+            {tittle}
+          </h2>
+          <h3 class="text-details text-xs">
+            {date}
+          </h3>
 
-        <p class="mt-4 text-sm">
-          I developed a web application based on an appointment scheduling system, user and instructor management, adapting it to the client's specific needs.
+          <div class="w-72 md:w-full xl:w-[89%]">
+            <p class="mt-4 text-xs md:text-sm">
+              I developed a web application based on an appointment scheduling system, user and instructor management, adapting it to the client's specific needs.
 
-          <span class="hidden">
-            I implemented the
-            <span class="text-complement">UI/UX design</span>
-            and the dashboard interface with Angular, Tailwind CSS and FullCalendar library.
-          </span>
-        </p>
-        <p></p>
-        <p class="text-sm">
-          I implemented
-          <span class="text-complement">RESTful API consumption</span>
-          to integrate external services, thus improving the user experience.
-
-          <span class="hidden">
-            I also actively participated in meetings with the implementation team to assess the feasibility of new requirements.
-          </span>
-        </p>
-      </div>
-    )}
-
+              <span class="hidden lg:inline">
+                I implemented the UI/UX design and the dashboard
+                <span class="text-complement">interface with Angular</span>
+                , Tailwind CSS and FullCalendar library.
+              </span>
+            </p>
+            <br />
+            <p class="text-xs md:text-sm">
+              I implemented
+              <span class="text-complement">RESTful API consumption</span>
+              to integrate external services, thus improving the user experience.
+              <span class="hidden md:inline">
+                I also actively participated in meetings with the implementation team to assess the feasibility of new requirements.
+              </span>
+            </p>
+          </div>
+        </div>
+      )}
+    </div>
     <!-- Company -->
     <div class="">
 

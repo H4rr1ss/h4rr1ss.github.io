@@ -4,6 +4,7 @@ export default {
 	theme: {
 		extend: {
 			colors: {
+				tbase: '#e8e8e8',
 				secundary: '#7FD8FA',
 				complement: '#FAC97F',
 				details: '#bbbaba',
