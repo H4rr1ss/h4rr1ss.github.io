@@ -9,6 +9,13 @@
   -webkit-text-fill-color: transparent;
 }
 
+.tittle-experience{
+  background: linear-gradient(90deg, #7FD8FA 0%, #1255C8 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .name{
   animation:
     typing 2s steps(18),

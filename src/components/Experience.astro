@@ -1,3 +1,51 @@
-<div class="h-[1000px]">
-  x
-</div>
+---
+import { dataExperience as data } from "../constants/const";
+---
+
+<section class="py-5">
+  <h1 class="text-center text-2xl text-white tracking-widest">
+    Experience
+  </h1>
+  <div class="w-full mt-10">
+    <!-- Decorative -->
+    <div class="">
+
+    </div>
+    <!-- Content -->
+    {data.map(({ tittle, company, date }) =>
+      <div class="flex flex-col gap-1">
+        <h2 class="text-lg tittle-experience font-semibold">
+          {tittle}
+        </h2>
+        <h3 class="text-details text-xs">
+          {date}
+        </h3>
+
+        <p class="mt-4 text-sm">
+          I developed a web application based on an appointment scheduling system, user and instructor management, adapting it to the client's specific needs.
+
+          <span class="hidden">
+            I implemented the
+            <span class="text-complement">UI/UX design</span>
+            and the dashboard interface with Angular, Tailwind CSS and FullCalendar library.
+          </span>
+        </p>
+        <p></p>
+        <p class="text-sm">
+          I implemented
+          <span class="text-complement">RESTful API consumption</span>
+          to integrate external services, thus improving the user experience.
+
+          <span class="hidden">
+            I also actively participated in meetings with the implementation team to assess the feasibility of new requirements.
+          </span>
+        </p>
+      </div>
+    )}
+
+    <!-- Company -->
+    <div class="">
+
+    </div>
+  </div>
+</section>

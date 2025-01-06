@@ -4,6 +4,9 @@ export default {
 	theme: {
 		extend: {
 			colors: {
+				secundary: '#7FD8FA',
+				complement: '#FAC97F',
+				details: '#bbbaba',
         customBg: 'rgba(167, 199, 231, 0.03)',
 				customBg2: 'rgba(167, 199, 231, 0.1)',
       },

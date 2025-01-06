@@ -9,17 +9,17 @@ import "../styles/comp.css";
 
   <!-- container -->
   <div
-    class="min-h-screen flex flex-col gap-4 md:gap-5 w-full justify-center px-7 md:px-24 lg:px-32 xl:px-56 relative z-10"
+    class="min-h-screen flex flex-col gap-4 md:gap-5 w-full justify-center px-6 md:px-24 lg:px-32 xl:px-56 relative z-10"
   >
     <h2
       class="text-3xl font-medium w-[170px] whitespace-nowrap overflow-hidden border-r-[3px] border-[#e8e8e8] name md:text-6xl md:w-[330px] lg:w-[400px] lg:text-7xl xl:w-[392px]"
     >
-      {data.title}
+      {data.name}
     </h2>
     <h1 class="text-3xl font-semibold flex tracking-wider title md:text-5xl w-full lg:text-6xl xl:text-7xl">
-      {data.description}
+      {data.tittle}
     </h1>
-    <p class="text-[#c0c0c0] text-sm w-64 md:text-xl md:w-[400px] lg:text-2xl xl:text-lg">{data.text}</p>
+    <p class="text-details text-sm w-64 md:text-xl md:w-[400px] lg:text-2xl xl:text-lg">{data.description}</p>
     <button
       class="cursor-pointer text-[#7FD5FA] border-[#7FD5FA] border-[1px] py-2 mt-4 rounded-lg font-medium text-sm w-[100px] md:w-[160px] flex justify-center items-center gap-2 xl:w-[130px] xl:py-1.5"
     >
