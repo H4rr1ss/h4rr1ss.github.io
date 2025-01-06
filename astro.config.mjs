@@ -5,5 +5,6 @@ import tailwind from '@astrojs/tailwind';    // Importa la integración de Tailw
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react()] // Configura las integraciones de Astro
+  integrations: [tailwind(), react()],
+  site: 'https://H4rr1ss.github.io',
 });
