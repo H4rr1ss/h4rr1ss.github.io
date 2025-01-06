@@ -8,4 +8,5 @@ export default defineConfig({
   integrations: [tailwind(), react()],
   site: 'https://H4rr1ss.github.io',
   base: '/',
+  outDir: './dist',
 });
