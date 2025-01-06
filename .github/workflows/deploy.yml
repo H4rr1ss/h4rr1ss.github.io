@@ -1,18 +1,14 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
-  # Using a different branch name? Replace `main` with your branch’s name
   push:
-    branches: [ main ]
-  # Allows you to run this workflow manually from the Actions tab on GitHub.
-  workflow_dispatch:
+    branches: [main]  # Se ejecutará cuando hagas push a la rama `main`
+  workflow_dispatch:  # También puedes disparar este flujo manualmente desde la pestaña de Actions
 
-# Allow this job to clone the repo and create a page deployment
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: read  # Permite leer el contenido del repositorio
+  pages: write  # Permite hacer el despliegue en GitHub Pages
+  id-token: write  # Permite autenticarte para el despliegue
 
 jobs:
   build:
@@ -22,18 +18,23 @@ jobs:
         uses: actions/checkout@v4
       - name: Install, build, and upload your site
         uses: withastro/action@v3
-        # with:
-          # path: . # The root location of your Astro project inside the repository. (optional)
-          # node-version: 20 # The specific version of Node that should be used to build your site. Defaults to 20. (optional)
-          # package-manager: pnpm@latest # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
+        with:
+          # No necesitas especificar la opción `base` aquí, ya que no estás usando un subdirectorio
+          # Si tienes algún `package-lock.json`, `yarn.lock`, etc., será detectado automáticamente
+          # Puedes personalizar la versión de Node si es necesario, pero por defecto es la 20
 
   deploy:
-    needs: build
+    needs: build  # Asegura que se construya primero antes de desplegar
     runs-on: ubuntu-latest
     environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      name: github-pages  # La configuración del entorno (puedes dejarla como está)
+      url: ${{ steps.deployment.outputs.page_url }}  # La URL pública de tu página desplegada
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          # Puedes especificar la rama `gh-pages` en caso de que no esté configurada automáticamente
+          branch: gh-pages  # Asegúrate de que tu sitio se despliegue en la rama `gh-pages`
+          folder: dist      # El folder donde Astro coloca la salida (generalmente `dist`)
+
