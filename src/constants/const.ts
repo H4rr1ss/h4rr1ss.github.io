@@ -18,3 +18,11 @@ export const dataExperience = [
     date: "Sep 2024 / Nov 2024"
   }
 ]
+
+export const dataProjects = [
+  {
+    title: "Kehuel Airlines",
+    description: "A comprehensive solution for airport management and security is provided, offering a seamless experience to passengers.",
+    technologies: ["HTML5", "TypeScript", "NextJS", "TailwindCSS"],
+  }
+]

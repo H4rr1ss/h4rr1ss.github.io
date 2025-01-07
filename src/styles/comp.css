@@ -61,3 +61,35 @@
     transform: translateY(110vh) scale(0);
   }
 }
+
+
+.wrapper{
+  animation: slide 16s infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  31% {
+    transform: translateX(-100%);
+  }
+  51% {
+    transform: translateX(-100%);
+  }
+  61% {
+    transform: translateX(-200%);
+  }
+  82% {
+    transform: translateX(-200%);
+  }
+  96% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}

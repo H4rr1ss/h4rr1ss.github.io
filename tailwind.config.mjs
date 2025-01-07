@@ -8,6 +8,7 @@ export default {
 				secundary: '#7FD8FA',
 				complement: '#FAC97F',
 				details: '#bbbaba',
+				tag: '#30030E',
         customBg: 'rgba(167, 199, 231, 0.03)',
 				customBg2: 'rgba(167, 199, 231, 0.1)',
       },
