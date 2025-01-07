@@ -1,7 +1,7 @@
 export const dataNavbar = [
-  { name: "Experience", path: "#experience" },
-  { name: "Projects", path: "#projects" },
-  { name: "Skills", path: "#skills" },
+  { name: "Experience", path: "#experienceS" },
+  { name: "Projects", path: "#projectS" },
+  { name: "Skills", path: "#skillS" },
   { name: "Contact", path: "#contact" },
 ];
 

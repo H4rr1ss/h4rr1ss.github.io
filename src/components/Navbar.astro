@@ -1,16 +1,61 @@
 ---
-import { dataNavbar } from "../constants/const"
+import { dataNavbar } from "../constants/const";
 ---
 
 <nav
+  id="navbar"
   class="flex justify-center fixed w-full lg:justify-between py-6 md:py-7 px-10 transition-[top] duration-300 bg-transparent backdrop-blur-md backdrop-saturate-150 xl:p-6 z-20"
 >
   <div class="hidden lg:flex">
     <a href="/">Harry Gómez</a>
   </div>
-  <ul class="flex gap-8 md:gap-12">
-    {dataNavbar.map(({ name, path }) =>
-      <li class="md:text-lg">{name}</li>
-    )}
+  <ul class="flex gap-8 md:gap-12 cursor-pointer">
+    {dataNavbar.map(({ name, path }) => (
+      <li class="md:text-lg" data-scroll={path}>{name}</li>
+    ))}
   </ul>
 </nav>
+
+<script>
+// Smooth scroll to target section with dynamic offset
+const scrollToSection = (path:any) => {
+  const targetSection = document.querySelector(path);
+  if (targetSection) {
+    const targetPosition = targetSection.offsetTop;
+    
+    // Determine offset based on screen size
+    let offset = 0;
+    const screenWidth = window.innerWidth;
+    console.log(screenWidth);
+    if (path === "#experienceS") {
+      // Apply different offset for different screen sizes
+      if (screenWidth >= 1280) { // xl screens
+        offset = 150; // Adjust this value for xl screens
+      } else if (screenWidth >= 1024) { // lg screens
+        offset = 478; // Adjust this value for lg screens
+      } else if (screenWidth >= 760) { // lg screens
+        offset = 380; // Adjust this value for lg screens
+      } else if (screenWidth >= 412) { // md screens
+        offset = 300; // Adjust this value for md screens
+      } else if (screenWidth >= 360) { // sm screens
+        offset = 170;  // Adjust this value for sm screens
+      }
+    // If the target section is 'experienceS', apply an additional offset
+      offset += 50; // Extra offset for 'experienceS' section
+    }
+
+    window.scrollTo({
+      top: targetPosition - offset, // Apply calculated offset
+      behavior: "smooth",
+    });
+  }
+};
+
+// Add click event to navbar items
+document.querySelectorAll("[data-scroll]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const path = button.getAttribute("data-scroll");
+    scrollToSection(path);
+  });
+});
+</script> 
