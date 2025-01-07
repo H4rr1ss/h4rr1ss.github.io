@@ -7,6 +7,7 @@ export default {
 				tbase: '#e8e8e8',
 				secundary: '#7FD8FA',
 				complement: '#FAC97F',
+				borde: '#3e4a58',
 				details: '#bbbaba',
 				tag: '#30030E',
         customBg: 'rgba(167, 199, 231, 0.03)',
