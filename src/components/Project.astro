@@ -1,0 +1,52 @@
+---
+const { title, description, technologies, urlImages } = Astro.props;
+---
+
+<div
+  class="w-full border-[1px] border-borde rounded-lg flex flex-col h-[435px]"
+>
+  <!-- carousel images -->
+  <div class="w-full h-[48%] rounded-t-lg bg-red-950 overflow-hidden">
+    <div class="wrapper w-full flex">
+      {
+        urlImages.map((img: any) => (
+          <img
+            src={img}
+            alt="k"
+            class="object-cover w-full h-full opacity-90"
+          />
+        ))
+      }
+    </div>
+  </div>
+
+  <!-- body container -->
+  <div
+    class="text-sm h-[52%] py-4 px-4 flex flex-col items-center justify-between"
+  >
+    <h2 class="text-center text-lg font-semibold tracking-wider text-tbase">
+      {title}
+    </h2>
+    <p class="w-full mt-2 text-xs text-details">
+      {description}
+    </p>
+    <ul class="flex my-5 gap-1.5 w-full justify-center flex-wrap">
+      {
+        technologies.map((tech: any) => (
+          <li class="text-xs bg-tag p-1 rounded-md text-details">{tech}</li>
+        ))
+      }
+    </ul>
+
+    <button
+      class="border-[0.9px] py-0.5 border-details rounded-xl px-10 text-details flex gap-1 items-center"
+    >
+      <span>GitHub</span>
+      <img
+        src="/imas/igithub.svg"
+        alt="gh"
+        class="w-[13.5px] h-[13.5px] mb-0.5"
+      />
+    </button>
+  </div>
+</div>

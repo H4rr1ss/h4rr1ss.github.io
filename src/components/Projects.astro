@@ -1,51 +1,27 @@
 ---
-import { dataProjects as data } from "src/constants/const"
+import { dataProjects as data } from "src/constants/const";
+import Project from "./Project.astro";
 ---
-<section class="min-h-screen flex flex-col gap-4 mt-10 justify-center">
 
-  <h1 class="text-center text-2xl text-white tracking-widest font-medium md:text-4xl xl:text-5xl">
+<section class="min-h-screen flex flex-col gap-4 mt-20 justify-center py-20">
+  <!-- tittle -->
+  <h1
+    class="text-center text-3xl text-white tracking-widest font-semibold md:text-4xl xl:text-5xl"
+  >
     Projects
   </h1>
 
-
-  <!-- Projects container -->
-  <div class="w-full mt-10">
-
-
-    <div class="w-full border-2 border-gray-500 rounded-lg flex flex-col h-[400px]">
-      <!-- container -->
-      <div class="w-full h-[48%] rounded-t-lg bg-red-950 overflow-hidden">
-        <div class="wrapper w-full flex">
-          <img src="/imas/kehuel1.jpeg" alt="k1" class="object-cover w-full h-full opacity-90" />
-          <img src="/imas/kehuel2.jpeg" alt="k1" class="object-cover w-full h-full opacity-90" />
-          <img src="/imas/kehuel3.jpeg" alt="k1" class="object-cover w-full h-full opacity-90" />
-          <img src="/imas/kehuel1.jpeg" alt="k1" class="object-cover w-full h-full opacity-90" />
-        </div>
-      </div>
-
-      <div class="text-sm py-3 px-4 flex flex-col items-center">
-        <h2 class="text-center text-lg font-semibold tracking-wider text-tbase">
-          {data[0].title}
-        </h2>
-        <p class="w-full mt-2 text-xs text-details">
-          {data[0].description}
-        </p>
-        <ul class="flex my-5 gap-2 w-full justify-center">
-          {data[0].technologies.map((tech) => (
-          <li class="text-xs bg-tag p-1 rounded-md text-details">
-            {tech}
-          </li>
-          ))}
-        </ul>
-
-        <button class="border-[1px] py-0.5 border-details rounded-lg px-10 text-details">
-          GitHub
-        </button>
-      </div>
-    </div>
-
-
+  <!-- projects container -->
+  <div class="w-full mt-10 flex flex-col justify-center items-center gap-8 px-2">
+    {
+      data.map(({ title, description, technologies, urlImages }) => (
+        <Project
+          title={title}
+          description={description}
+          technologies={technologies}
+          urlImages={urlImages}
+        />
+      ))
+    }
   </div>
-
-
 </section>
