@@ -22,7 +22,7 @@ const scrollToSection = (path:any) => {
   const targetSection = document.querySelector(path);
   if (targetSection) {
     const targetPosition = targetSection.offsetTop;
-    
+
     // Determine offset based on screen size
     let offset = 0;
     const screenWidth = window.innerWidth;
@@ -58,4 +58,4 @@ document.querySelectorAll("[data-scroll]").forEach((button) => {
     scrollToSection(path);
   });
 });
-</script> 
+</script>

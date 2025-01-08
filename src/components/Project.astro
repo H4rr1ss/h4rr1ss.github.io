@@ -3,17 +3,17 @@ const { title, description, technologies, urlImages } = Astro.props;
 ---
 
 <div
-  class="w-full border-[1px] border-borde rounded-lg flex flex-col h-[435px] md:h-[420px] lg:h-[410px] xl:h-[430px] xl:w-[311px]"
+  class="w-full border-[0.5px] border-borde rounded-lg flex flex-col h-[435px] md:h-[420px] lg:h-[410px] xl:h-[430px] xl:w-[311px]"
 >
   <!-- carousel images -->
   <div class="w-full h-[48%] rounded-t-lg bg-red-950 overflow-hidden md:h-[46%]">
-    <div class="wrapper w-full flex">
+    <div class="wrapper flex">
       {
         urlImages.map((img: any) => (
           <img
             src={img}
             alt="k"
-            class="object-cover w-full h-full opacity-90"
+            class="object-cover h-full opacity-90"
           />
         ))
       }
@@ -22,7 +22,7 @@ const { title, description, technologies, urlImages } = Astro.props;
 
   <!-- body container -->
   <div
-    class="text-sm h-[52%] py-4 px-4 flex flex-col items-center justify-between md:px-2 md:h-[54%] lg:px-3 lg:py-2 lg:justify-around"
+    class="text-sm h-[52%] p-4 flex flex-col items-center justify-between md:px-2 md:h-[54%] lg:px-3 lg:py-2 lg:justify-around"
   >
     <h2 class="text-center text-lg font-semibold tracking-wider text-tbase">
       {title}
