@@ -22,6 +22,7 @@ export const dataExperience = [
 export const dataProjects = [
   {
     title: "Kehuel Airlines",
+    link: "https://github.com/H4rr1ss/SEMI1_1S2024_PROYECTO_A_20/tree/main/frontend",
     description: "A comprehensive solution for airport management and security is provided, offering a seamless experience to passengers.",
     technologies: ["NextJS", "TypeScript", "HTML5", "TailwindCSS"],
     urlImages: [
@@ -33,6 +34,7 @@ export const dataProjects = [
   },
   {
     title: "Qnave",
+    link: "https://github.com/H4rr1ss/AYD2_Proyecto_G6/tree/main/client",
     description: "Provide a safe, efficient and reliable transportation service in a challenging environment marked by safety issues and market competition.",
     technologies: ["Angular 18", "TypeScript", "HTML5", "TailwindCSS"],
     urlImages: [

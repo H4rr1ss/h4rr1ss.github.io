@@ -23,9 +23,10 @@ import Project from "./Project.astro";
     xl:mt-[60px] xl:flex xl:w-full xl:px-0 xl:gap-5
   ">
     {
-      data.map(({ title, description, technologies, urlImages }) => (
+      data.map(({ title, link, description, technologies, urlImages }) => (
         <Project
           title={title}
+          link={link}
           description={description}
           technologies={technologies}
           urlImages={urlImages}

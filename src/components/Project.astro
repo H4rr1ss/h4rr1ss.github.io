@@ -1,5 +1,5 @@
 ---
-const { title, description, technologies, urlImages } = Astro.props;
+const { title, link, description, technologies, urlImages } = Astro.props;
 ---
 
 <div
@@ -38,15 +38,18 @@ const { title, description, technologies, urlImages } = Astro.props;
       }
     </ul>
 
-    <button
-      class="border-[0.9px] py-0.5 border-details rounded-xl px-10 text-details flex gap-1 items-center justify-center md:px-8"
+    <a
+      href={link}
+      target="_blank"
+      class="btn-project border-[0.9px] py-0.5 border-details rounded-xl px-10 text-details flex gap-1 items-center justify-center md:px-8 transform transition-all duration-200 ease-in-out cursor-pointer"
     >
       <span>GitHub</span>
-      <img
-        src="/imas/igithub.svg"
-        alt="gh"
-        class="w-[13.5px] h-[13.5px] mb-0.5"
-      />
-    </button>
+        <img
+          src="/imas/igithub.svg"
+          alt="gh"
+          class="w-[13.5px] h-[13.5px] xl:mb-0.5"
+        />
+    </a>
+
   </div>
 </div>
