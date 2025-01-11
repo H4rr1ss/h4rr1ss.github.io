@@ -1,7 +1,6 @@
 export const dataNavbar = [
   { name: "Experience", path: "#experienceS" },
   { name: "Projects", path: "#projectS" },
-  { name: "Skills", path: "#skillS" },
   { name: "Contact", path: "#contact" },
 ];
 
@@ -44,4 +43,47 @@ export const dataProjects = [
       "/imas/qnave1.png",
     ]
   }
+]
+
+export const skills = [
+  {
+    url:"/imas/angularI.svg",
+    name: "Angular"
+  },
+  {
+    url:"/imas/reactI.svg",
+    name: "React"
+  },
+  {
+    url:"/imas/htmlI.svg",
+    name: "HTML5"
+  },
+  {
+    url:"/imas/cssI.svg",
+    name: "CSS3"
+  },
+  {
+    url:"/imas/tailwindI.svg",
+    name: "TailwindCSS"
+  },
+  {
+    url:"/imas/jsI.svg",
+    name: "JavaScript"
+  },
+  {
+    url:"/imas/tsI.svg",
+    name: "TypeScript"
+  },
+  {
+    url:"/imas/postgI.svg",
+    name: "PostgreSQL"
+  },
+  {
+    url:"/imas/gitI.svg",
+    name: "Git"
+  },
+  {
+    url:"/imas/figma.svg",
+    name: "Figma"
+  },
 ]

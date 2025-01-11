@@ -1,1 +1,30 @@
-<section class="h-[1000px]" id="skillS">x</section>
+---
+import { skills } from "../constants/const";
+---
+
+<section
+  class="w-full flex flex-col justify-center items-center mt-44 lg:mt-52"
+>
+  <h1
+    class="text-center text-3xl text-white tracking-widest font-semibold md:text-4xl xl:text-5xl"
+  >
+    Skills
+  </h1>
+  <div
+    class="mt-10 w-full grid grid-rows-2 grid-cols-5 gap-6 md:grid-cols-6 lg:mt-14 md:gap-9 xl:grid-cols-7 xl:gap-10"
+  >
+    {
+      skills.map(({ url, name }) => (
+        <div class="relative group cursor-pointer transform transition-all duration-200 ease-in-out hover:scale-110 flex justify-center items-center">
+          <img
+            src={url}
+            class="w-9 h-9 md:w-12 md:h-12 xl:w-[51px] xl:h-[51px]"
+          />
+          <div class="absolute top-[50px] left-0 right-0 flex justify-center items-center text-white text-center p-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-xs">
+            {name}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
