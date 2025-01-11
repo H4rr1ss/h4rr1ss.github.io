@@ -33,7 +33,11 @@ const { title, link, description, technologies, urlImages } = Astro.props;
     <ul class="flex my-5 gap-1.5 w-full justify-center flex-wrap">
       {
         technologies.map((tech: any) => (
-          <li class="text-xs bg-tag p-1 rounded-md text-details">{tech}</li>
+          <li
+            class="text-xs bg-tag p-1.5 rounded-md text-details bg-opacity-35 hover:bg-opacity-100 cursor-default"
+          >
+            {tech}
+          </li>
         ))
       }
     </ul>
