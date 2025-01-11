@@ -63,30 +63,30 @@
 }
 
 
-.wrapper{
-  animation: slide 16s infinite;
+.group:hover .wrapper {
+  animation: slide 8s infinite linear;
 }
 
 @keyframes slide {
   0% {
     transform: translateX(0);
   }
-  20% {
+  3% {
     transform: translateX(0);
+  }
+  15% {
+    transform: translateX(-100%);
   }
   31% {
     transform: translateX(-100%);
   }
-  51% {
-    transform: translateX(-100%);
-  }
-  61% {
+  45% {
     transform: translateX(-200%);
   }
-  82% {
+  68% {
     transform: translateX(-200%);
   }
-  96% {
+  84% {
     transform: translateX(-300%);
   }
   100% {
