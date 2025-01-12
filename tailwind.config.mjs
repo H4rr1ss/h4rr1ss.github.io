@@ -17,6 +17,9 @@ export default {
 			fontWeight: {
         '1200': 1200,
       },
+			fontSize: {
+				'2xs': '0.625rem',
+			},
 		},
 	},
 	plugins: [],

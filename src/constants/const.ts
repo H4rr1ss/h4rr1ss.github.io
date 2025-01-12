@@ -1,7 +1,7 @@
 export const dataNavbar = [
   { name: "Experience", path: "#experienceS" },
   { name: "Projects", path: "#projectS" },
-  { name: "Contact", path: "#contact" },
+  { name: "Contact", path: "#contactS" },
 ];
 
 export const dataPresentation = {
@@ -35,7 +35,7 @@ export const dataProjects = [
     title: "Qnave",
     link: "https://github.com/H4rr1ss/AYD2_Proyecto_G6/tree/main/client",
     description: "Provide a safe, efficient and reliable transportation service in a challenging environment marked by safety issues and market competition.",
-    technologies: ["Angular 18", "TypeScript", "HTML5", "TailwindCSS"],
+    technologies: ["Angular", "TypeScript", "HTML5", "TailwindCSS"],
     urlImages: [
       "/imas/qnave1.png",
       "/imas/qnave2.png",
@@ -48,7 +48,7 @@ export const dataProjects = [
 export const skills = [
   {
     url:"/imas/angularI.svg",
-    name: "Angular"
+    name: "Angular 18"
   },
   {
     url:"/imas/reactI.svg",
