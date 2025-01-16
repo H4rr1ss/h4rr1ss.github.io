@@ -1,17 +1,62 @@
+---
+import { dataContact } from "src/constants/const"
+---
 <section
-  class="w-full py-40 xl:py-64 flex flex-col justify-center items-center"
+  class="w-full py-36 xl:py-64 flex flex-col justify-center items-center"
   id="contactS"
 >
   <h1 class="text-center text-3xl text-white tracking-widest font-semibold md:text-4xl xl:text-5xl">
     Contact
   </h1>
 
-  <div class="border-borde border-[1px] p-2 rounded-sm mt-10 text-details cursor-pointer">
-    <p class="p-4 text-xs">
+
+  <div
+    class="border-borde border-[1px] relative p-2 md:p-5 xl:p-8 rounded-sm mt-14 text-details cursor-pointer w-full h-24 md:h-28 md:w-11/12 xl:w-3/4 xl:h-32"
+    id="textChanger"
+  >
+    <p class="p-2 flex justify-start items-center w-full h-16 text-xs md xl:text-base" id="contactText">
       Feel free to contact me to discuss how I can contribute to your team!
     </p>
-    <h4 class="text-2xs w-full text-right">
+    <h4 class="text-2xs w-full right-0 text-right px-2 bottom-1 absolute">
       Click to generate another text
     </h4>
   </div>
+
+  <div class="w-full h-10 mt-2 flex justify-center items-center gap-4">
+    {
+      dataContact.map(({ link, url }) => (
+      <a
+        href={url}
+        target="_blank"
+      >
+        <img
+          src={link}
+          class="w-6 h-6 transform transition-all duration-200 ease-in-out hover:scale-110"
+        />
+      </a>
+      ))
+    }
+  </div>
 </section>
+
+<script>
+  const btn_text = document.getElementById("textChanger") as HTMLElement;
+
+  btn_text.addEventListener('click', () => {
+    const messages = [
+      "Feel free to contact me to discuss how I can contribute to your team!",
+      "I’d be happy to discuss how I can be an asset to your team.",
+      "Let’s connect to explore how I can collaborate",
+      "Reach out anytime to discuss how I can help your team achieve its goals.",
+      "I’m open to a conversation about how I can contribute",
+      "I am enthusiastic about learning new technologies and being able to work with them."
+    ];
+
+    // Select a random message from the array
+    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+
+    // Get the element and check if it exists
+    const contactText = document.getElementById("contactText") as HTMLElement;
+    contactText.textContent = randomMessage;
+  });
+</script>

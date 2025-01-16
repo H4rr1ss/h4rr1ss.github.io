@@ -47,43 +47,62 @@ export const dataProjects = [
 
 export const skills = [
   {
-    url:"/imas/angularI.svg",
+    url:"/imas/skills/angularI.svg",
     name: "Angular 18"
   },
   {
-    url:"/imas/reactI.svg",
+    url:"/imas/skills/reactI.svg",
     name: "React"
   },
   {
-    url:"/imas/htmlI.svg",
+    url:"/imas/skills/htmlI.svg",
     name: "HTML5"
   },
   {
-    url:"/imas/cssI.svg",
+    url:"/imas/skills/cssI.svg",
     name: "CSS3"
   },
   {
-    url:"/imas/tailwindI.svg",
+    url:"/imas/skills/tailwindI.svg",
     name: "TailwindCSS"
   },
   {
-    url:"/imas/jsI.svg",
+    url:"/imas/skills/jsI.svg",
     name: "JavaScript"
   },
   {
-    url:"/imas/tsI.svg",
+    url:"/imas/skills/tsI.svg",
     name: "TypeScript"
   },
   {
-    url:"/imas/postgI.svg",
+    url:"/imas/skills/postgI.svg",
     name: "PostgreSQL"
   },
   {
-    url:"/imas/gitI.svg",
+    url:"/imas/skills/gitI.svg",
     name: "Git"
   },
   {
-    url:"/imas/figma.svg",
+    url:"/imas/skills/figma.svg",
     name: "Figma"
   },
+  {
+    url:"/imas/skills/docker.svg",
+    name: "Docker"
+  },
+]
+
+export const dataContact = [
+  {
+    link: "/imas/contact/github.svg",
+    url: "https://github.com/H4rr1ss"
+  },
+  {
+    link: "/imas/contact/email.png",
+    url: ""
+  },
+  {
+    link: "/imas/contact/linkedin.png",
+    url: "mailto"
+  }
 ]
