@@ -103,6 +103,6 @@ export const dataContact = [
   },
   {
     link: "/imas/contact/linkedin.png",
-    url: "mailto"
+    url: "https://www.linkedin.com/in/harry-gomez-78602b315/"
   }
 ]
